@@ -1,0 +1,43 @@
+doctype html
+
+head
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='/css/styles.css')
+section#last
+  // heading
+  .full
+    h3 Contato
+    .lt
+      // form starting
+      form.form-horizontal(method='post' action='/contact')
+        .form-group
+          .col-sm-12
+            // name
+            input#name.form-control(type='text' placeholder='NOME' name='name' required='')
+        .form-group
+          .col-sm-12
+            // email
+            input#email.form-control(type='email' placeholder='EMAIL' name='email' required='')
+        // message
+        textarea.form-control(rows='10' placeholder='MESSAGEM' name='message')
+        button#submit.btn.btn-primary.send-button(type='submit' value='Enviar')
+          i.fa.fa-paper-plane
+          span.send-text Enviar
+      // end of form
+    // Contact information
+    .rt
+      ul.contact-list
+        li.list-item
+          i.fa.fa-map-marker.fa-1x
+            span.contact-text.place
+              | Seu endere&ccedil;o
+        li.list-item
+          i.fa.fa-envelope.fa-1x
+            span.contact-text.gmail
+              a(href='mailto:yourmail@gmail.com' title='Send me an email')
+                | email@gmail.com
+        li.list-item
+          i.fa.fa-phone.fa-1x
+            span.contact-text.phone
+              | (033) 12345678

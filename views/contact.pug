@@ -10,15 +10,19 @@ section#last
     h3 Contato
     .lt
       // form starting
-      form.form-horizontal(method='post' action='/contact')
+      form.form-horizontal(method='post' action='/auth/signup')
         .form-group
           .col-sm-12
-            // name
-            input#name.form-control(type='text' placeholder='NOME' name='name' required='')
+            // username
+            input#username.form-control(type='text' placeholder='USUÁRIO' name='username' required='')
         .form-group
           .col-sm-12
             // email
             input#email.form-control(type='email' placeholder='EMAIL' name='email' required='')
+        .form-group
+          .col-sm-12
+            // password
+            input#password.form-control(type='password' placeholder='SENHA' name='password' required='')
         // message
         textarea.form-control(rows='10' placeholder='MESSAGEM' name='message')
         button#submit.btn.btn-primary.send-button(type='submit' value='Enviar')
